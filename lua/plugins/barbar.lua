@@ -16,6 +16,7 @@ return {
     version = '^1.0.0', -- optional: only update when a new 1.x version is released
   
     vim.keymap.set("n", "<Tab>", ":BufferNext<CR>", { noremap = true, silent = true }),
-    vim.keymap.set("n", "<S-Tab>", ":BufferPrevious<CR>", { noremap = true, silent = true })
+    vim.keymap.set("n", "<S-Tab>", ":BufferPrevious<CR>", { noremap = true, silent = true }),
+    vim.keymap.set("n", "<leader>x", ":BufferClose<CR>", { noremap = true, silent = true })
   },
 }
