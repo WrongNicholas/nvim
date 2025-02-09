@@ -1,7 +1,6 @@
 -- ~/.config/nvim/lua/plugins/mason-lspconfig.lua
 
 return {
-  -- mason
   {
     "williamboman/mason.nvim",
     config = function()
@@ -9,7 +8,6 @@ return {
     end
   },
   
-  -- mason-lspconfig
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = {
@@ -22,7 +20,6 @@ return {
       mason_lspconfig.setup({
         ensure_installed = { "clangd" },
       })
-      
       mason_lspconfig.setup_handlers({
         function (server_name)
           local lspconfig = require("lspconfig")

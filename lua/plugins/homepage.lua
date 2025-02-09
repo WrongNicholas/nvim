@@ -1,3 +1,5 @@
+-- ~/.config/nvim/lua/plugins/homepage.lua
+
 return {
     "WrongNicholas/homepage",
     lazy = false,  -- Load immediately
