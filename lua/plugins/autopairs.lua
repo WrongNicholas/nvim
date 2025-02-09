@@ -1,4 +1,4 @@
--- ~/.config/nvim/lua/plugins/nvim-autopairs.lua
+-- ~/.config/nvim/lua/plugins/autopairs.lua
 
 return {
     'windwp/nvim-autopairs',

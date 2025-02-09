@@ -1,4 +1,4 @@
--- ~/.config/nvim/lua/plugins/nvim-notify.lua
+-- ~/.config/nvim/lua/plugins/notify.lua
 
 return {
   {

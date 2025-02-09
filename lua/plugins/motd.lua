@@ -1,10 +1,9 @@
 -- ~/.config/nvim/lua/plugins/homepage.lua
 
 return {
-    "WrongNicholas/homepage",
+    "WrongNicholas/motd.nvim",
     lazy = false,  -- Load immediately
-    priority = 1000,  -- Ensure it loads first
     config = function()
-        require("homepage").setup()
+        require("motd").show_motd()
     end,
 }

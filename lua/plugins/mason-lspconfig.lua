@@ -18,7 +18,7 @@ return {
       local mason_lspconfig = require("mason-lspconfig")
 
       mason_lspconfig.setup({
-        ensure_installed = { "clangd" },
+        ensure_installed = { "clangd", "rust_analyzer" },
       })
       mason_lspconfig.setup_handlers({
         function (server_name)
@@ -32,12 +32,28 @@ return {
             vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
           end
 
-          lspconfig[server_name].setup({
-            on_attach = on_attach,
-            capabilities = capabilities,
-          })
+          -- Special handling for rust-analyzer
+          if server_name == "rust-analyzer" then
+            lspconfig.rust_analyzer.setup({
+              on_attach = on_attach,
+              capabilities = capabilities,
+              settings = {
+                ["rust-analyzer"] = {
+                  checkOnSave = {
+                    command = "clippy"
+                  }
+                }
+              }
+            })
+          else
+            lspconfig[server_name].setup({
+              on_attach = on_attach,
+              capabilities = capabilities,
+            })
+          end
         end,
       })
     end
   }
 }
+
