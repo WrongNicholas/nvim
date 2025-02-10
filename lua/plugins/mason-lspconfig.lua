@@ -7,7 +7,7 @@ return {
       require("mason").setup()
     end
   },
-  
+
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = {
@@ -32,28 +32,13 @@ return {
             vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
           end
 
-          -- Special handling for rust-analyzer
-          if server_name == "rust-analyzer" then
-            lspconfig.rust_analyzer.setup({
-              on_attach = on_attach,
-              capabilities = capabilities,
-              settings = {
-                ["rust-analyzer"] = {
-                  checkOnSave = {
-                    command = "clippy"
-                  }
-                }
-              }
-            })
-          else
-            lspconfig[server_name].setup({
-              on_attach = on_attach,
-              capabilities = capabilities,
-            })
-          end
+          lspconfig[server_name].setup({
+            on_attach = on_attach,
+            capabilities = capabilities,
+          })
         end,
       })
     end
-  }
+  },
 }
 
