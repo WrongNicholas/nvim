@@ -8,4 +8,3 @@ vim.keymap.set('n', '<leader>w', ':w<CR>', { desc = 'Save file' })
 vim.keymap.set('n', '<leader>q', ':q!<CR>', { desc = 'Quit window' })
 vim.keymap.set('n', '<leader>\\', ':vsplit<CR>', { desc = 'Vertical Split' })
 vim.keymap.set('n', '<leader>=', ':split<CR>', { desc = 'Horizontal Split' })
-
