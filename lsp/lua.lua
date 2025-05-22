@@ -1,3 +1,5 @@
+-- ~/.config/nvim/lsp/lua.lua
+
 return {
   cmd = { "lua-language-server", },
   filetypes = { "lua", },

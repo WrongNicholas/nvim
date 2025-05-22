@@ -1,8 +1,6 @@
 -- ~/.config/nvim/init.lua
 
-require("config.options")
-require("config.keybinds")
-require("config.lazy")
+require("config.init")
 
 vim.lsp.enable("cxx")
 vim.lsp.enable("lua")
