@@ -17,6 +17,8 @@ vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
 
+vim.opt.scrolloff = 15
+
 vim.schedule(function()
   vim.opt.clipboard = "unnamedplus"
 end)
