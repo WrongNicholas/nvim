@@ -21,10 +21,10 @@ return {
       end, { desc = 'Horizontal Split' })
 
       -- Resize splits
-      map('n', '<A-h>', smart_splits.resize_left)
-      map('n', '<A-j>', smart_splits.resize_down)
-      map('n', '<A-k>', smart_splits.resize_up)
-      map('n', '<A-l>', smart_splits.resize_right)
+      map('n', '<S-A-h>', smart_splits.resize_left)
+      map('n', '<S-A-j>', smart_splits.resize_down)
+      map('n', '<S-A-k>', smart_splits.resize_up)
+      map('n', '<S-A-l>', smart_splits.resize_right)
 
       -- Move between splits
       map('n', '<C-h>', smart_splits.move_cursor_left)
@@ -33,10 +33,10 @@ return {
       map('n', '<C-l>', smart_splits.move_cursor_right)
 
       -- Swap buffers between splits
-      map('n', '<leader><leader>h', smart_splits.swap_buf_left)
-      map('n', '<leader><leader>j', smart_splits.swap_buf_down)
-      map('n', '<leader><leader>k', smart_splits.swap_buf_up)
-      map('n', '<leader><leader>l', smart_splits.swap_buf_right)
+      map('n', '<C-A-h>', smart_splits.swap_buf_left)
+      map('n', '<C-A-j>', smart_splits.swap_buf_down)
+      map('n', '<C-A-k>', smart_splits.swap_buf_up)
+      map('n', '<C-A-l>', smart_splits.swap_buf_right)
     end
   }
 }
